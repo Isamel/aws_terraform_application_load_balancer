@@ -4,7 +4,7 @@ resource "null_resource" "depends_on" {
     }
 }
 
-resource "aws_lb" "lb_terraform" {
+resource "aws_lb" "alb_terraform" {
     count                            = var.alb_count
     depends_on                       = [null_resource.depends_on]
     name                             = var.alb_name
